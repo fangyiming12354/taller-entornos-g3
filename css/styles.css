@@ -1,6 +1,37 @@
-<!--RESET GENERAL-->
+/* <!--RESET GENERAL--> */
 *{
     margin: 0; 
     padding: 0; 
     box-sizing: border-box;
+}
+/* <!--GENERAL--> */ 
+body {
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+    background:  #241F3A;
+    color: #EDEDED;
+}
+/* <!--HEADER--> */ 
+#main-header {     
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;  
+    background-image: url("../img/fondo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+#main-header h1 { 
+    font-family: 'Russo One', sans-serif;
+    font-size: 4rem;
+    color: #FF7A00;
+} 
+#main-header p { 
+    font-family: 'Russo One', sans-serif;
+    font-size: 1.3rem;
+    color: #FF7A00;
 }
