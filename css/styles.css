@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 /* <!--RESET GENERAL--> */
 *{
     margin: 0; 
@@ -18,20 +19,133 @@ body {
     flex-direction: column;
     justify-content: center; 
     align-items: center;  
-    background-image: url("../img/fondo.jpg");
-    background-size: cover;
-    background-position: center;
+    background-image: url("../img/fondo.gif");
+    background-size: 100% 120%;
+    background-position: center ;
     background-repeat: no-repeat;
     color: white;
 }
 
 #main-header h1 { 
-    font-family: 'Russo One', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 4rem;
-    color: #FF7A00;
+    color: #81f9cf;
 } 
 #main-header p { 
-    font-family: 'Russo One', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.3rem;
     color: #FF7A00;
 }
+.main-nav {
+    background: #001F3F; 
+    padding: 0rem;
+    height: auto;
+    border: #00BFFF 4px solid;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+    padding: 10px 0;
+    flex-wrap: wrap;
+}
+
+.nav-item a {
+    color: #FFFFFF; 
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-block;  
+    padding: 10px 15px; 
+    border-radius: 5px;
+}
+
+.nav-item a:hover {
+    color: #001F3F;  
+    background: #00BFFF; 
+}
+/*.main-nav {
+    background: #001F3F;
+    padding: 0rem;
+    border: #00FF88 4px solid;
+    height: auto;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+    padding: 10px 0;
+    flex-wrap: wrap;
+}
+
+.nav-item a{
+    cursor: pointer;
+    font-weight: 500;
+    color: #EDEDED;
+    transition: color 0.3s ease;
+}
+
+.nav-item a:hover {
+    background-color: #00FF88;
+    color: ;
+}
+
+
+/*#Tarjetas-Noticias-Principales {
+  max-width: 1200px;
+  margin: 1.2rem auto;
+  padding: 10px;
+}
+
+ Estilos para las tarjetas de noticias principales /
+.Nuevas-Tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+/ Estilos para cada tarjeta individual */
+/*.Nueva-Tarjeta {
+  background: #01020c;
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.Nueva-Tarjeta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(237, 237, 237, 0.2);
+}
+
+.Nueva-Tarjeta figure {
+  margin: 0;
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+}
+
+.Nueva-Tarjeta img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.Nueva-Tarjeta h3 {
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  color: #e5e7eb;
+}
+esto para la barra de navegacion:*/ 
+
