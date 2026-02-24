@@ -31,11 +31,7 @@ body {
     font-size: 4rem;
     color: #81f9cf;
 } 
-#main-header p { 
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.3rem;
-    color: #FF7A00;
-}
+
 .main-nav {
     background: #001F3F; 
     padding: 0rem;
@@ -214,12 +210,32 @@ footer {
     }
 
     /* ocultar publicidad PC */
-    .Publicidad.pc {
+    .Publicidad-Derecha-pc,
+    .Publicidad-Izquierda-pc {
         display: none;
     }
+        /* publicidad arriba */
+    .Publicidad-Izquierda-movil {
+        order: -1;
+    }
+
+    /* publicidad abajo */
+    .Publicidad-Derecha-movil {
+        order: 99;
+    }
+
+    .Publicidad-Izquierda-movil img,
+    .Publicidad-Derecha-movil img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        border-radius: 5px;
+    }
+
 
     /* mostrar publicidad móvil */
-    .Publicidad.movil {
+    .Publicidad-Derecha-movil,
+    .Publicidad-Izquierda-movil {
         display: block;
         position: static; /* quitamos sticky */
         grid-column: 1;
@@ -230,14 +246,57 @@ footer {
     .Equipo {
         grid-column: 1;
     }
+}
 
-    /* publicidad arriba */
-    .Publicidad.Izquierda.movil {
+@media (max-width: 600px) {
+
+    #main-header h1 { 
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    color: #81f9cf;
+} 
+
+    /* layout en 1 columna */
+    #main-content {
+        grid-template-columns: 1fr;
+    }
+
+    /* ocultar publicidad PC */
+    .Publicidad-Derecha-pc,
+    .Publicidad-Izquierda-pc {
+        display: none;
+    }
+        /* publicidad arriba */
+    .Publicidad-Izquierda-movil {
         order: -1;
     }
 
     /* publicidad abajo */
-    .Publicidad.Derecha.movil {
+    .Publicidad-Derecha-movil {
         order: 99;
     }
+
+    .Publicidad-Izquierda-movil img,
+    .Publicidad-Derecha-movil img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        border-radius: 5px;
+    }
+
+
+    /* mostrar publicidad móvil */
+    .Publicidad-Derecha-movil,
+    .Publicidad-Izquierda-movil {
+        display: block;
+        position: static; /* quitamos sticky */
+        grid-column: 1;
+    }
+
+    /* todas las secciones ocupan todo */
+    .Bienvenida,
+    .Equipo {
+        grid-column: 1;
+    }
 }
+
