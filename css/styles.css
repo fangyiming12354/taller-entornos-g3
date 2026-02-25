@@ -1,24 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 /* <!--RESET GENERAL--> */
 *{
-    margin: 0; 
-    padding: 0; 
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
-/* <!--GENERAL--> */ 
+/* <!--GENERAL--> */
 body {
     margin: 0;
     font-family: 'Rubik', sans-serif;
     background:  #241F3A;
     color: #EDEDED;
 }
-/* <!--HEADER--> */ 
-#main-header {     
+/* <!--HEADER--> */
+#main-header {
     min-height: 300px;
     display: flex;
     flex-direction: column;
-    justify-content: center; 
-    align-items: center;  
+    justify-content: center;
+    align-items: center;
     background-image: url("../img/fondo.gif");
     background-size: 100% 120%;
     background-position: center ;
@@ -26,14 +26,14 @@ body {
     color: white;
 }
 
-#main-header h1 { 
+#main-header h1 {
     font-family: 'Montserrat', sans-serif;
     font-size: 4rem;
     color: #81f9cf;
-} 
+}
 
 .main-nav {
-    background: #001F3F; 
+    background: #001F3F;
     padding: 0rem;
     height: auto;
     border: #00BFFF 4px solid;
@@ -49,18 +49,18 @@ body {
 }
 
 .nav-item a {
-    color: #FFFFFF; 
+    color: #FFFFFF;
     text-decoration: none;
     font-weight: 500;
     transition: all 0.3s ease;
-    display: inline-block;  
-    padding: 10px 15px; 
+    display: inline-block;
+    padding: 10px 15px;
     border-radius: 5px;
 }
 
 .nav-item a:hover {
-    color: #001F3F;  
-    background: #00BFFF; 
+    color: #001F3F;
+    background: #00BFFF;
 }
 
 /* ===== MAIN GRID ===== */
@@ -71,7 +71,7 @@ body {
     max-width: 100%;
     margin: 20px auto;
     padding: 0 10px;
-    align-items: start; 
+    align-items: start;
 }
 
 /* columna izquierda sticky */
@@ -108,13 +108,13 @@ body {
 }
 .Publicidad-Derecha-movil,
 .Publicidad-Izquierda-movil {
-    display: none; 
+    display: none;
 }
 /* columna central */
 .Central-Content {
     display: flex;
     flex-direction: column;
-    gap: 20px; 
+    gap: 20px;
 }
 
 /* bienvenida */
@@ -147,14 +147,14 @@ body {
 }
 .Equipo img {
     width: 100%;
-    max-height: 250px; 
-    object-fit: contain; 
+    max-height: 250px;
+    object-fit: contain;
     border-radius: 10px;
 }
 
 /* ===== LISTA DE JUEGOS ===== */
 .Lista-Juegos h3 {
-    grid-column: 1 / -1; 
+    grid-column: 1 / -1;
     text-align: center;
     margin-bottom: 10px;
     font-size: 1.1rem;
@@ -170,7 +170,7 @@ body {
 }
 
 .Juego {
-    width: 100%; 
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -182,9 +182,9 @@ body {
 }
 
 .Juego img {
-    width: 100%; 
+    width: 100%;
     height: 80px;
-    object-fit: contain; 
+    object-fit: contain;
 }
 
 .Desc-Juegos {
@@ -250,11 +250,11 @@ footer {
 
 @media (max-width: 600px) {
 
-    #main-header h1 { 
+    #main-header h1 {
     font-family: 'Montserrat', sans-serif;
     font-size: 3rem;
     color: #81f9cf;
-} 
+}
 
     /* layout en 1 columna */
     #main-content {
