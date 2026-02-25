@@ -1,37 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 /* <!--RESET GENERAL--> */
 *{
-    margin: 0; 
-    padding: 0; 
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
-/* <!--GENERAL--> */ 
+/* <!--GENERAL--> */
 body {
     margin: 0;
     font-family: 'Rubik', sans-serif;
     background:  #241F3A;
     color: #EDEDED;
 }
-/* <!--HEADER--> */ 
-#main-header {     
+/* <!--HEADER--> */
+#main-header {
     min-height: 300px;
     display: flex;
     flex-direction: column;
-    justify-content: center; 
-    align-items: center;  
-    background-image: url("../img/fondo.jpg");
-    background-size: cover;
-    background-position: center;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../img/fondo.gif");
+    background-size: 100% 120%;
+    background-position: center ;
     background-repeat: no-repeat;
     color: white;
 }
 
-#main-header h1 { 
-    font-family: 'Russo One', sans-serif;
+#main-header h1 {
+    font-family: 'Montserrat', sans-serif;
     font-size: 4rem;
-    color: #FF7A00;
-} 
-#main-header p { 
-    font-family: 'Russo One', sans-serif;
-    font-size: 1.3rem;
-    color: #FF7A00;
+    color: #81f9cf;
 }
+
+.main-nav {
+    background: #001F3F;
+    padding: 0rem;
+    height: auto;
+    border: #00BFFF 4px solid;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+    padding: 10px 0;
+    flex-wrap: wrap;
+}
+
+.nav-item a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.nav-item a:hover {
+    color: #001F3F;
+    background: #00BFFF;
+}
+
+/* ===== MAIN GRID ===== */
+#main-content {
+    display: grid;
+    grid-template-columns: 250px 1fr 250px;
+    gap: 20px;
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 0 10px;
+    align-items: start;
+}
+
+/* columna izquierda sticky */
+.Publicidad-Izquierda-pc {
+    grid-column: 1;
+    grid-row: 1;
+    position: sticky;
+    top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* columna derecha sticky */
+.Publicidad-Derecha-pc {
+    grid-column: 3;
+    grid-row: 1;
+    position: sticky;
+    top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* imágenes de publicidad */
+.Publicidad-Izquierda-pc img,
+.Publicidad-Derecha-pc img {
+    width: 100%;
+    height: 85vh;
+    object-fit: contain;
+    border-radius: 5px;
+}
+.Publicidad-Derecha-movil,
+.Publicidad-Izquierda-movil {
+    display: none;
+}
+/* columna central */
+.Central-Content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* bienvenida */
+.Bienvenida {
+    background: #01020c;
+    padding: 20px;
+    border-radius: 12px;
+}
+.Bienvenida h2 {
+    text-align: center;
+}
+/* ===== EQUIPOS ===== */
+.Equipo {
+    background: #01020c;
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+.Equipo:hover {
+    transform: translateY(-5px);
+}
+
+.Equipo h2 {
+    text-align: center;
+}
+.Equipo img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+/* ===== LISTA DE JUEGOS ===== */
+.Lista-Juegos h3 {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: #81f9cf;
+}
+
+/* Grid de juegos */
+.Lista-Juegos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 100%;
+}
+
+.Juego {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #1a1a2e;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.Juego img {
+    width: 100%;
+    height: 80px;
+    object-fit: contain;
+}
+
+.Desc-Juegos {
+    display: block;
+    padding: 5px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #001F3F;
+    margin-top: 20px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+
+    /* layout en 1 columna */
+    #main-content {
+        grid-template-columns: 1fr;
+    }
+
+    /* ocultar publicidad PC */
+    .Publicidad-Derecha-pc,
+    .Publicidad-Izquierda-pc {
+        display: none;
+    }
+        /* publicidad arriba */
+    .Publicidad-Izquierda-movil {
+        order: -1;
+    }
+
+    /* publicidad abajo */
+    .Publicidad-Derecha-movil {
+        order: 99;
+    }
+
+    .Publicidad-Izquierda-movil img,
+    .Publicidad-Derecha-movil img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        border-radius: 5px;
+    }
+
+
+    /* mostrar publicidad móvil */
+    .Publicidad-Derecha-movil,
+    .Publicidad-Izquierda-movil {
+        display: block;
+        position: static; /* quitamos sticky */
+        grid-column: 1;
+    }
+
+    /* todas las secciones ocupan todo */
+    .Bienvenida,
+    .Equipo {
+        grid-column: 1;
+    }
+}
+
+@media (max-width: 600px) {
+
+    #main-header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    color: #81f9cf;
+}
+
+    /* layout en 1 columna */
+    #main-content {
+        grid-template-columns: 1fr;
+    }
+
+    /* ocultar publicidad PC */
+    .Publicidad-Derecha-pc,
+    .Publicidad-Izquierda-pc {
+        display: none;
+    }
+        /* publicidad arriba */
+    .Publicidad-Izquierda-movil {
+        order: -1;
+    }
+
+    /* publicidad abajo */
+    .Publicidad-Derecha-movil {
+        order: 99;
+    }
+
+    .Publicidad-Izquierda-movil img,
+    .Publicidad-Derecha-movil img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        border-radius: 5px;
+    }
+
+
+    /* mostrar publicidad móvil */
+    .Publicidad-Derecha-movil,
+    .Publicidad-Izquierda-movil {
+        display: block;
+        position: static; /* quitamos sticky */
+        grid-column: 1;
+    }
+
+    /* todas las secciones ocupan todo */
+    .Bienvenida,
+    .Equipo {
+        grid-column: 1;
+    }
+}
+
